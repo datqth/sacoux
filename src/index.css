@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Manrope", sans-serif;
+
+  --color-primary: #006497;
+  --color-primary-container: #4897d2;
+  --color-secondary: #006d37;
+  --color-secondary-container: #6bfe9c;
+  --color-tertiary: #b4271d;
+  --color-tertiary-container: #fb5a49;
+  
+  --color-surface: #f7f9ff;
+  --color-surface-container-low: #edf4ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #d9eaff;
+  --color-surface-container-highest: #d1e4fb;
+  --color-surface-dim: #c9dcf3;
+  --color-surface-variant: #d1e4fb;
+  
+  --color-on-surface: #091d2e;
+  --color-on-surface-variant: #3f4850;
+  --color-on-primary: #ffffff;
+  --color-on-secondary-container: #00743a;
+  --color-on-tertiary-container: #5d0001;
+  
+  --color-outline-variant: #bfc7d2;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.glass-header {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+}
+
+.primary-gradient {
+  background: linear-gradient(135deg, #006497 0%, #4897d2 100%);
+}
+
+.selection-primary::selection {
+  background-color: #cce5ff;
+}
+
